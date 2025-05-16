@@ -13,7 +13,7 @@ import os
 @api_view(['POST'])
 def signUp(request):
     if request.method=='POST':
-        serializer= SingUpSerializer(data=request.data)
+        serializer= SingUpSerializer(data=request.data) #signup serializer
 
         if serializer.is_valid():
             serializer.save()
