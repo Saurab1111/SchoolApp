@@ -23,7 +23,7 @@ def signUp(request):
 def login(request):
     if request.method=='POST':
         user = authenticate(request=request,username=request.data['username'],password=request.data['password'])
-        print(user)
+        # print(user)
         if not isinstance(user,AnonymousUser):
             payload={
                 'user_id':user.id,
